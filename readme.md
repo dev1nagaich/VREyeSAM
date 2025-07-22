@@ -1,6 +1,25 @@
 # VREyeSAM
 
 **Virtual Reality Non-Frontal Iris Segmentation using Foundational Model with Uncertainty Weighted Loss**
+**Abstract:** Advancements in virtual and head-mounted devices
+have introduced new challenges for iris biometrics, such
+as varying gaze directions, partial occlusions, and incon-
+sistent lighting conditions. To address these obstacles, we
+present VREyeSAM, a robust iris segmentation framework
+specifically designed for images captured under both
+steady and dynamic gaze scenarios. Our pipeline includes
+a quality-aware pre-processing module that automatically
+filters out partially or fully closed eyes, ensuring that only
+high-quality, fully open iris images are used for training
+and inference. In addition, we introduce an uncertainty-
+weighted hybrid loss function that adaptively balances
+multiple learning objectives, enhancing the robustness of
+the model under diverse visual conditions. Evaluated on
+the VRBiom dataset, VREyeSAM delivers state-of-the-art
+performance, achieving a Precision of 0.751, Recall of
+0.870, F1-Score of 0.806, and a mean IoU of 0.647 out-
+performing existing segmentation methods by a significant
+margin
 
 ---
 
