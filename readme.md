@@ -1,5 +1,5 @@
 # VREyeSAM  Virtual Reality Non-Frontal Iris Segmentation using Foundational Model with Uncertainty Weighted Loss
-- Geetanjali Sharma<sup>1</sup>, Dev Nagachi<sup>1</sup>, Gaurav Jaswal<sup>2</sup>, Aditya Nigam<sup>1</sup>, Raghavendra Ramachandra<sup>3</sup>  
+Geetanjali Sharma<sup>1</sup>, Dev Nagachi<sup>1</sup>, Gaurav Jaswal<sup>2</sup>, Aditya Nigam<sup>1</sup>, Raghavendra Ramachandra<sup>3</sup>  
 <sup>1</sup> Indian Institute of Technology Mandi, India
 <sup>2</sup>Technology Innovation Hub, Indian Institute of Technology Mandi, India
 <sup>3</sup>Norwegian University of Science and Technology (NTNU), Gjøvik, Norway
@@ -29,10 +29,28 @@ performance, achieving a Precision of 0.751, Recall of
 0.870, F1-Score of 0.806, and a mean IoU of 0.647 out-
 performing existing segmentation methods by a significant
 margin
-
 <p align="center">
-  <img src="assets/page1.png" alt="Architecture" width="600"/>
+  <img src="assets/Teaser_IJCB_UPDATED.png" alt="Architecture" width="600"/>
 </p>
+Figure: VREyeSAM segmentation on VRBiom non-frontal iris images captured under varied gaze and eyewear conditions. Rows show input images, ground truth masks, and predicted masks with uncertainty maps.
+
+## VREyeSAM Architecture 
+<p align="center">
+  <img src="assets/VRBIOM_SAM2_UPDATED.png" alt="Architecture" width="600"/>
+</p>
+Figure: Virtual reality iris biometrics segmentation using transformer based model where network takes binary mask and points as an
+prompt as input to train the model with hybrid loss(Focal + Dice + BCE + Uncertainty weighted loss) function. For inference model predict
+a binary mask of the input image without explicitly using points as input.
+
+## Results
+<p align="center">
+  <img src="assets/VREyeSAM_updated_overlay-compressed.png" alt="Architecture" width="600"/>
+</p>
+Figure: Visual comparison of iris segmentation results across multiple models. The first row displays the original iris images, the second row shows the corresponding ground truth masks, and rows three to seven illustrate the predicted masks from five different segmentation models. Last Overlays column shows GT mask in green, predicted mask in red, and overlapping area i.e both masks agree in yellow color.
+
+## License to use the VRBiom-SegM (Groundtruth Binary Mask)
+If you use the VRBiom-SegM, pease cite our paper.
+   License form coming soon !!!
 
 ## Citation
 
