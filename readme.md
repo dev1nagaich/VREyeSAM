@@ -25,7 +25,6 @@ margin
 ---
 
 <p align="center">
-  <a href="./LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License"></a>
   <a href="https://example.com"><img src="https://img.shields.io/badge/Paper-View-blue.svg" alt="Paper"></a>
   <a href="#"><img src="https://img.shields.io/badge/Demo-Coming%20Soon-orange.svg" alt="Demo"></a>
 </p>
@@ -34,17 +33,16 @@ margin
 
 ## Description
 
-**VREyeSAM** proposes a robust iris segmentation pipeline designed for challenging **non-frontal iris images** in virtual reality (VR) environments.  
-It fine-tunes the **Segment Anything Model (SAM)** with a novel **uncertainty-weighted loss**, delivering enhanced segmentation accuracy and generalization across datasets.
 
 ---
 
 ## Authors
 
 - Geetanjali Sharma<sup>1</sup>, Dev Nagachi<sup>1</sup>, Gaurav Jaswal<sup>2</sup>, Aditya Nigam<sup>1</sup>, Raghavendra Ramachandra<sup>3</sup>  
-<sup>1</sup>Indian Institute of Technology Mandi, India  
-<sup>2</sup>Technology Innovation Hub, IIT Mandi, India  
-<sup>3</sup>NTNU Gjøvik, Norway
+
+<sup>1</sup> Indian Institute of Technology Mandi, India
+<sup>2</sup>Technology Innovation Hub, Indian Institute of Technology Mandi, India
+<sup>3</sup>Norwegian University of Science and Technology (NTNU), Gjøvik, Norway
 
 ---
 
