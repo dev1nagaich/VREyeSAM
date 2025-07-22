@@ -1,6 +1,7 @@
 # VREyeSAM
 
 **Virtual Reality Non-Frontal Iris Segmentation using Foundational Model with Uncertainty Weighted Loss**
+
 **Abstract:** Advancements in virtual and head-mounted devices
 have introduced new challenges for iris biometrics, such
 as varying gaze directions, partial occlusions, and incon-
