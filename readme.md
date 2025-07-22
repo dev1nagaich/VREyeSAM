@@ -10,10 +10,6 @@
   <a href="#"><img src="https://img.shields.io/badge/Demo-Coming%20Soon-orange.svg" alt="Demo"></a>
 </p>
 
-
-
-
-
 **Abstract:** Advancements in virtual and head-mounted devices
 have introduced new challenges for iris biometrics, such
 as varying gaze directions, partial occlusions, and incon-
@@ -34,36 +30,14 @@ performance, achieving a Precision of 0.751, Recall of
 performing existing segmentation methods by a significant
 margin
 
+## Citation
 
----
+If you find this work useful, please cite our paper:
 
-
-
----
-
-## Highlights
-
-- ✅ Fine-tuned **SAM** for VR iris segmentation.
-- ✅ Introduced **uncertainty-weighted loss** to address prediction ambiguity.
-- ✅ Tested on real-world **VRBiom** and **CASIA-VR** iris datasets.
-- ✅ Achieved state-of-the-art segmentation performance.
-
----
-
-## Sample Results
-
-<p align="center">
-  <img src="assets/sample_output1.png" width="400" />
-  <img src="assets/sample_output2.png" width="400" />
-</p>
-
----
-
-## Getting Started
-
-### Installation
-
-```bash
-git clone https://github.com/yourusername/VREyeSAM.git
-cd VREyeSAM
-pip install -r requirements.txt
+```bibtex
+@article{sharma2025vreyesam,
+  title={VREyeSAM: Virtual Reality Non-Frontal Iris Segmentation using Foundational Model with Uncertainty Weighted Loss},
+  author={Sharma, Geetanjali and Nagachi, Dev and Jaswal, Gaurav and Nigam, Aditya and Ramachandra, Raghavendra},
+  Conference={IJCB},
+  year={2025}
+}
