@@ -30,6 +30,10 @@ performance, achieving a Precision of 0.751, Recall of
 performing existing segmentation methods by a significant
 margin
 
+<p align="center">
+  <img src="assets/page1.png" alt="Architecture" width="600"/>
+</p>
+
 ## Citation
 
 If you find this work useful, please cite our paper:
