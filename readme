@@ -1,32 +1,8 @@
-<h1 align="center">👁️ VREyeSAM</h1>
-<h3 align="center">Virtual Reality Non-Frontal Iris Segmentation using Foundational Model with Uncertainty Weighted Loss</h3>
-
-<p align="center">
-  <a href="./LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT License"></a>
-  <a href="https://example.com"><img src="https://img.shields.io/badge/View-Paper-blue" alt="View Paper"></a>
-  <a href="#"><img src="https://img.shields.io/badge/Demo-Coming%20Soon-orange" alt="Demo Coming Soon"></a>
-</p>
-
 ---
-
-## 📌 Overview
-
-**VREyeSAM** presents a novel approach to iris segmentation in virtual reality (VR) environments, tackling the challenging case of **non-frontal iris images**.  
-We fine-tune the **Segment Anything Model (SAM)** and introduce an **uncertainty-weighted loss** to improve segmentation robustness.
-
-> 📄 **Authors:**  
-> Geetanjali Sharma<sup>1</sup>, Dev Nagachi<sup>1</sup>, Gaurav Jaswal<sup>2</sup>, Aditya Nigam<sup>1</sup>, Raghavendra Ramachandra<sup>3</sup>  
-> <sup>1</sup>Indian Institute of Technology Mandi, India  
-> <sup>2</sup>Technology Innovation Hub, IIT Mandi, India  
-> <sup>3</sup>NTNU, Gjøvik, Norway  
-
----
-
-## 🌟 Key Contributions
-
-- 🚀 A **fine-tuned SAM model** for VR iris segmentation tasks.
-- 🧠 Incorporation of **uncertainty-weighted loss** for robustness.
-- 📊 Evaluation on challenging VR-based iris datasets.
-- 🏆 State-of-the-art performance on multiple benchmarks.
-
+@article{sharma2025vreyesam,
+  title={VREyeSAM: Virtual Reality Non-Frontal Iris Segmentation using Foundational Model with Uncertainty Weighted Loss},
+  author={Sharma, Geetanjali and Nagachi, Dev and Jaswal, Gaurav and Nigam, Aditya and Ramachandra, Raghavendra},
+  journal={To appear},
+  year={2025}
+}
 ---
