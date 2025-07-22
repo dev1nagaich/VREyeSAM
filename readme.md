@@ -1,6 +1,18 @@
-# VREyeSAM
+# VREyeSAM  Virtual Reality Non-Frontal Iris Segmentation using Foundational Model with Uncertainty Weighted Loss
+- Geetanjali Sharma<sup>1</sup>, Dev Nagachi<sup>1</sup>, Gaurav Jaswal<sup>2</sup>, Aditya Nigam<sup>1</sup>, Raghavendra Ramachandra<sup>3</sup>  
+<sup>1</sup> Indian Institute of Technology Mandi, India
+<sup>2</sup>Technology Innovation Hub, Indian Institute of Technology Mandi, India
+<sup>3</sup>Norwegian University of Science and Technology (NTNU), Gjøvik, Norway
 
-**Virtual Reality Non-Frontal Iris Segmentation using Foundational Model with Uncertainty Weighted Loss**
+<p align="center">
+  <a href="https://example.com"><img src="https://img.shields.io/badge/Paper-View-blue.svg" alt="Paper"></a>
+  <a href="#"><img src="https://img.shields.io/badge/Code-Coming%20Soon-orange" alt="Code"></a>
+  <a href="#"><img src="https://img.shields.io/badge/Demo-Coming%20Soon-orange.svg" alt="Demo"></a>
+</p>
+
+
+
+
 
 **Abstract:** Advancements in virtual and head-mounted devices
 have introduced new challenges for iris biometrics, such
@@ -22,27 +34,10 @@ performance, achieving a Precision of 0.751, Recall of
 performing existing segmentation methods by a significant
 margin
 
----
-
-<p align="center">
-  <a href="https://example.com"><img src="https://img.shields.io/badge/Paper-View-blue.svg" alt="Paper"></a>
-  <a href="#"><img src="https://img.shields.io/badge/Demo-Coming%20Soon-orange.svg" alt="Demo"></a>
-</p>
 
 ---
 
-## Description
 
-
----
-
-## Authors
-
-- Geetanjali Sharma<sup>1</sup>, Dev Nagachi<sup>1</sup>, Gaurav Jaswal<sup>2</sup>, Aditya Nigam<sup>1</sup>, Raghavendra Ramachandra<sup>3</sup>  
-
-<sup>1</sup> Indian Institute of Technology Mandi, India
-<sup>2</sup>Technology Innovation Hub, Indian Institute of Technology Mandi, India
-<sup>3</sup>Norwegian University of Science and Technology (NTNU), Gjøvik, Norway
 
 ---
 
