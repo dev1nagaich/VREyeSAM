@@ -50,8 +50,9 @@ a binary mask of the input image without explicitly using points as input.
 Figure: Visual comparison of iris segmentation results across multiple models. The first row displays the original iris images, the second row shows the corresponding ground truth masks, and rows three to seven illustrate the predicted masks from five different segmentation models. Last Overlays column shows GT mask in green, predicted mask in red, and overlapping area i.e both masks agree in yellow color.
 
 ## License to use the VRBiom-SegM (Groundtruth Binary Mask)
-If you use the VRBiom-SegM, please cite our paper.
-   License form coming soon !!!
+<p align="center">
+  <a href="#"><img src="https://img.shields.io/badge/VRBiomSegM GT License-Coming%20Soon-green.svg" alt="VRBiom-SegM GT License"></a>
+</p>
 
 ## Citation
 
