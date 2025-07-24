@@ -61,7 +61,7 @@ If you find this work useful, please cite our paper:
 ```bibtex
 @article{sharma2025vreyesam,
   title={VREyeSAM: Virtual Reality Non-Frontal Iris Segmentation using Foundational Model with Uncertainty Weighted Loss},
-  author={Sharma Geetanjali, Nagaich Dev, Jaswal Gaurav, Nigam Aditya, and Ramachandra, Raghavendra},
+  author={Sharma Geetanjali, Nagaich Dev, Jaswal Gaurav, Nigam Aditya, and Ramachandra Raghavendra},
   Conference={IJCB},
   year={2025}
 }
