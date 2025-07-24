@@ -1,7 +1,7 @@
 # VREyeSAM  Virtual Reality Non-Frontal Iris Segmentation using Foundational Model with Uncertainty Weighted Loss
 Geetanjali Sharma<sup>1</sup>, Dev Nagaich<sup>1</sup>, Gaurav Jaswal<sup>2</sup>, Aditya Nigam<sup>1</sup>, Raghavendra Ramachandra<sup>3</sup>  
 <sup>1</sup> Indian Institute of Technology Mandi, India
-<sup>2</sup>Technology Innovation Hub, Indian Institute of Technology Mandi, India
+<sup>2</sup>Division of Digital Forensics, Directorate of Forensic Services, Shimla, Himachal Pradesh 171002, India
 <sup>3</sup>Norwegian University of Science and Technology (NTNU), Gjøvik, Norway
 
 <p align="center">
