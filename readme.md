@@ -8,6 +8,7 @@ Geetanjali Sharma<sup>1</sup>, Dev Nagachi<sup>1</sup>, Gaurav Jaswal<sup>2</sup
   <a href="https://example.com"><img src="https://img.shields.io/badge/Paper-View-blue.svg" alt="Paper"></a>
   <a href="#"><img src="https://img.shields.io/badge/Code-Coming%20Soon-orange" alt="Code"></a>
   <a href="#"><img src="https://img.shields.io/badge/Demo-Coming%20Soon-orange.svg" alt="Demo"></a>
+  <a href="#"><img src="https://img.shields.io/badge/VRBiomSegM GT-Coming%20Soon-green.svg" alt="VRBiom-SegM GT"></a>
 </p>
 
 **Abstract:** Advancements in virtual and head-mounted devices
