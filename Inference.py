@@ -10,7 +10,7 @@ from PIL import Image
 
 sys.path.append("/VREyeSAM/segment-anything-2")
 
-images_dir = "/VREyeSAM/cross_dataset/type1preprocessed_image_mask/rect_extension_images_maskexist"
+images_dir = "/VREyeSAM/VREyeSAM_data/images"
 probabilistic_masks_folder = "/VREyeSAM/cross_dataset/PROBABILISTIC_MASK_PREDICTION"
 binary_masks_folder = "/VREyeSAM/cross_dataset/BINARY_MASK_PREDICTION"
 
