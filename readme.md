@@ -60,9 +60,15 @@ Figure: Visual comparison of iris segmentation results across multiple models. T
 ```bash
 git clone https://github.com/GeetanjaliGTZ/VREyeSAM
 cd VREyeSAM
+```
+2. Create virtual environment:
+```bash
 python -m venv vreyesam_env
 source vreyesam_env/bin/activate  # Linux/Mac
 # or vreyesam_env\Scripts\activate  # Windows
+```
+3. Install dependencies:
+```bash
 pip install -r requirements.txt
 git clone https://github.com/facebookresearch/segment-anything-2
 cd segment-anything-2
