@@ -10,7 +10,7 @@ from sklearn.model_selection import train_test_split
 from sam2.build_sam import build_sam2
 from sam2.sam2_image_predictor import SAM2ImagePredictor
 
-sys.path.append("VREyeSAM/segment-anything-2")
+sys.path.append("/VREyeSAM/segment-anything-2")
 
 # Paths
 checkpoint_path = "VREyeSAM/segment-anything-2/fine_tuned_sam2_with_uncertainity_best.torch"  # your saved model
