@@ -54,6 +54,23 @@ Figure: Visual comparison of iris segmentation results across multiple models. T
   <a href="#"><img src="https://img.shields.io/badge/VRBiomSegM GT License-Coming%20Soon-green.svg" alt="VRBiom-SegM GT License"></a>
 </p>
 
+## Setup Instructions
+
+1. Clone the repository:
+```bash
+git clone https://github.com/GeetanjaliGTZ/VREyeSAM
+cd VREyeSAM
+python -m venv vreyesam_env
+source vreyesam_env/bin/activate  # Linux/Mac
+# or vreyesam_env\Scripts\activate  # Windows
+pip install -r requirements.txt
+git clone https://github.com/facebookresearch/segment-anything-2
+cd segment-anything-2
+pip install -e .
+cd ..
+
+```
+
 ## Citation
 
 If you find this work useful, please cite our paper:
