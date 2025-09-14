@@ -8,8 +8,8 @@ import matplotlib.pyplot as plt
 
 
 # Set input and output directories
-images_dir = "/VREyeSAM/VR_Biom_test_dataset/test/images"
-output_folder = "/VREyeSAM/VREyeSAM_recognition"
+images_dir = "/VREyeSAM/VREyeSAM_data/images"
+output_folder = "/VREyeSAM/VREyeSAM_results"
 uncertainty_output_folder = os.path.join(output_folder, "test_uncertainty_maps")
 os.makedirs(uncertainty_output_folder, exist_ok=True)
 
