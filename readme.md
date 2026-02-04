@@ -7,7 +7,7 @@ Geetanjali Sharma<sup>1</sup>, Dev Nagaich<sup>1</sup>, Gaurav Jaswal<sup>2</sup
 <p align="center">
   <a href="https://www.researchgate.net/publication/400248367_VREyeSAM_Virtual_Reality_Non-Frontal_Iris_Segmentation_using_Foundational_Model_with_uncertainty_weighted_loss"><img src="https://img.shields.io/badge/Paper-View-blue.svg" alt="Paper"></a>
   <a href="#"><img src="https://img.shields.io/badge/Demo-Coming%20Soon-orange.svg" alt="Demo"></a>
-  <a href="#"><img src="https://img.shields.io/badge/VRBiomSegM GT-Coming%20Soon-green.svg" alt="VRBiom-SegM GT"></a>
+  <a href="#"><img src="https://img.shields.io/badge/VRBiomSegM GT-Contact%20Details%20below-green.svg" alt="VRBiom-SegM GT"></a>
 </p>
 
 **Abstract:** Advancements in virtual and head-mounted devices
@@ -47,11 +47,6 @@ a binary mask of the input image without explicitly using points as input.
   <img src="assets/VREyeSAM_updated_overlay-compressed.png" alt="Architecture" width="600"/>
 </p>
 Figure: Visual comparison of iris segmentation results across multiple models. The first row displays the original iris images, the second row shows the corresponding ground truth masks, and rows three to seven illustrate the predicted masks from five different segmentation models. Last Overlays column shows GT mask in green, predicted mask in red, and overlapping area i.e both masks agree in yellow color.
-
-## License to use the VRBiom-SegM (Groundtruth Binary Mask)
-<p align="center">
-  <a href="#"><img src="https://img.shields.io/badge/VRBiomSegM GT License-Coming%20Soon-green.svg" alt="VRBiom-SegM GT License"></a>
-</p>
 
 ## Setup Instructions
 
