@@ -14,8 +14,8 @@ from sam2.sam2_image_predictor import SAM2ImagePredictor
 
 # Set relative paths from current directory
 images_dir = "VRBiomSegM/test/images"
-probabilistic_masks_folder = "VRBiomSegM/test/PROBABILISTIC_MASK_PREDICTION"
-binary_masks_folder = "VRBiomSegM/test/BINARY_MASK_PREDICTION"
+probabilistic_masks_folder = "VREyeSAM_results/PROBABILISTIC_MASK_PREDICTION"
+binary_masks_folder = "VREyeSAM_results/BINARY_MASK_PREDICTION"
 
 
 # Create output directories
@@ -23,8 +23,8 @@ os.makedirs(probabilistic_masks_folder, exist_ok=True)
 os.makedirs(binary_masks_folder, exist_ok=True)
 
 # Model paths - relative to segment-anything-2 directory
-sam2_checkpoint = "segment-anything-2/checkpoints/sam2.1_hiera_base_plus.pt"
-model_cfg = "segment-anything-2/sam2/configs/sam2.1/sam2.1_hiera_s.yaml"
+sam2_checkpoint = "segment-anything-2/checkpoints/sam2_hiera_small.pt"
+model_cfg = "configs/sam2/sam2_hiera_s.yaml"
 FINE_TUNED_MODEL_WEIGHTS = "segment-anything-2/checkpoints/VREyeSAM_uncertainity_best.torch"
 sam2_model = build_sam2(model_cfg, sam2_checkpoint, device="cuda")
 
