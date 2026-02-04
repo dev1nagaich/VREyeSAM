@@ -44,6 +44,8 @@ def read_batch(data):
     ann_map = cv2.resize(ann_map, (int(ann_map.shape[1] * r), int(ann_map.shape[0] * r)), interpolation=cv2.INTER_NEAREST)
     binary_mask = np.where(ann_map > 0, 1, 0).astype(np.uint8)
     coords = np.argwhere(binary_mask > 0)
+    if len(coords) == 0:
+        return None, None, None, 0
     points = np.array([[yx[1], yx[0]] for yx in coords[np.random.choice(len(coords), min(len(coords), 1))]])
     return Img, binary_mask[np.newaxis, ...], points[np.newaxis, ...], 1
 
@@ -52,10 +54,8 @@ def read_batch(data):
 # Resume from checkpoint if available, otherwise start fresh training
 # This allows continuing training from a previously saved model state
 
-# Use absolute path for config to avoid Hydra search path issues
-config_dir = os.path.dirname(__file__)
-model_cfg = os.path.join(config_dir, "segment-anything-2/sam2/configs/sam2.1/sam2.1_hiera_b+.yaml")
-sam2_checkpoint = "segment-anything-2/checkpoints/sam2.1_hiera_base_plus.pt"
+model_cfg = "configs/sam2/sam2_hiera_s.yaml"
+sam2_checkpoint = "segment-anything-2/checkpoints/sam2_hiera_small.pt"
 sam2_model = build_sam2(model_cfg, sam2_checkpoint, device="cuda")
 predictor = SAM2ImagePredictor(sam2_model)
 
@@ -94,7 +94,9 @@ for step in range(1, NO_OF_STEPS + 1):
 
         input_label = np.ones((num_masks, 1))
         predictor.set_image(image)
-        mask_input, unnorm_coords, labels, unnorm_box = predictor._prep_prompts(input_point, input_label)
+        mask_input, unnorm_coords, labels, unnorm_box = predictor._prep_prompts(
+            input_point, input_label, box=None, mask_logits=None, normalize_coords=True
+        )
 
         sparse_embeddings, dense_embeddings = predictor.model.sam_prompt_encoder(
             points=(unnorm_coords, labels), boxes=None, masks=None,
