@@ -173,8 +173,18 @@ VREyeSAM/
     └── test_uncertainty_maps/
 ```
 
+## Dataset Access
+
+The VRBiomSegM dataset is not included in this repository. To obtain access to the dataset, please contact:
+
+📧 **Email:** geetanjalisharma546@gmail.com
+
+Please include the following in your request:
+- Your name and affiliation
+- Purpose of usage
+- Brief description of your research
+
 ## Notes
-- The dataset `VRBiomSegM` is not included in this repository and must be obtained separately
 - All model checkpoints (`.pt`, `.torch`, `.pth`) are excluded from version control
 - Generated outputs (masks, plots) are also excluded from the repository
 - Training requires CUDA-capable GPU
