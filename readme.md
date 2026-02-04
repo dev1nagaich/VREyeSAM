@@ -65,7 +65,7 @@ cd VREyeSAM
 ```bash
 python3 -m venv vreyesam_env
 source vreyesam_env/bin/activate  # Linux/Mac
-# or vreyesam_env\Scripts\activate  # Windows git bash
+# or source vreyesam_env/Scripts/activate  # Windows git bash
 ```
 3. Install dependencies:
 ```bash
