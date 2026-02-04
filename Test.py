@@ -1,22 +1,28 @@
 import os
+import sys
 import cv2
 import torch
 import numpy as np
+import matplotlib.pyplot as plt
+
+# Add segment-anything-2 to path
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), "segment-anything-2"))
+
 from sam2.build_sam import build_sam2
 from sam2.sam2_image_predictor import SAM2ImagePredictor
 import matplotlib.pyplot as plt
 
 
 # Set input and output directories
-images_dir = "/VREyeSAM/VREyeSAM_data/images"
-output_folder = "/VREyeSAM/VREyeSAM_results"
+images_dir = "VRBiomSegM/test/images"
+output_folder = "VREyeSAM_results"
 uncertainty_output_folder = os.path.join(output_folder, "test_uncertainty_maps")
 os.makedirs(uncertainty_output_folder, exist_ok=True)
 
 # Load model
-sam2_checkpoint = "/VREyeSAM/segment-anything-2/sam2/sam2_hiera_small.pt"
-model_cfg = "sam2_hiera_s.yaml"
-FINE_TUNED_MODEL_WEIGHTS = "/VREyeSAM/segment-anything-2/fine_tuned_sam2_with_uncertainity_best.torch"
+sam2_checkpoint = "segment-anything-2/checkpoints/sam2.1_hiera_base_plus.pt"
+model_cfg = "segment-anything-2/sam2/configs/sam2.1/sam2.1_hiera_s.yaml"
+FINE_TUNED_MODEL_WEIGHTS = "segment-anything-2/checkpoints/VREyeSAM_uncertainity_best.torch"
 
 sam2_model = build_sam2(model_cfg, sam2_checkpoint, device="cuda")
 predictor = SAM2ImagePredictor(sam2_model)

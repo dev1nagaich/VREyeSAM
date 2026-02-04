@@ -1,28 +1,31 @@
 import os
+import sys
 import cv2
 import torch
 import numpy as np
 import matplotlib.pyplot as plt
-from sam2.build_sam import build_sam2
-from sam2.sam2_image_predictor import SAM2ImagePredictor
-import sys
 from PIL import Image
 
-sys.path.append("/VREyeSAM/segment-anything-2")
+# Add segment-anything-2 to path
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), "segment-anything-2"))
 
-images_dir = "/VREyeSAM/VREyeSAM_data/images"
-probabilistic_masks_folder = "/VREyeSAM/cross_dataset/PROBABILISTIC_MASK_PREDICTION"
-binary_masks_folder = "/VREyeSAM/cross_dataset/BINARY_MASK_PREDICTION"
+from sam2.build_sam import build_sam2
+from sam2.sam2_image_predictor import SAM2ImagePredictor
+
+# Set relative paths from current directory
+images_dir = "VRBiomSegM/test/images"
+probabilistic_masks_folder = "VRBiomSegM/test/PROBABILISTIC_MASK_PREDICTION"
+binary_masks_folder = "VRBiomSegM/test/BINARY_MASK_PREDICTION"
 
 
 # Create output directories
 os.makedirs(probabilistic_masks_folder, exist_ok=True)
 os.makedirs(binary_masks_folder, exist_ok=True)
 
-# Model paths
-sam2_checkpoint = "/extra/geetanjali/VREyeSAM/segment-anything-2/sam2/sam2_hiera_small.pt"
-model_cfg = "sam2_hiera_s.yaml"
-FINE_TUNED_MODEL_WEIGHTS = "/VREyeSAM/segment-anything-2/fine_tuned_sam2_with_uncertainity_best.torch"
+# Model paths - relative to segment-anything-2 directory
+sam2_checkpoint = "segment-anything-2/checkpoints/sam2.1_hiera_base_plus.pt"
+model_cfg = "segment-anything-2/sam2/configs/sam2.1/sam2.1_hiera_s.yaml"
+FINE_TUNED_MODEL_WEIGHTS = "segment-anything-2/checkpoints/VREyeSAM_uncertainity_best.torch"
 sam2_model = build_sam2(model_cfg, sam2_checkpoint, device="cuda")
 
 # Load the fine-tuned model

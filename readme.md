@@ -78,6 +78,28 @@ bash download_ckpts.sh
 cd ..
 ```
 
+4. Download VREyeSAM fine-tuned weights:
+
+**Option 1: Using Hugging Face CLI (Recommended)**
+```bash
+# Download the fine-tuned model weights from Hugging Face
+cd segment-anything-2/checkpoints
+huggingface-cli download devnagaich/VREyeSAM VREyeSAM_uncertainity_best.torch --local-dir .
+cd ../..
+```
+
+**Option 2: Direct Download**
+- Download directly from Hugging Face: [https://huggingface.co/devnagaich/VREyeSAM](https://huggingface.co/devnagaich/VREyeSAM)
+- Download the file: `VREyeSAM_uncertainity_best.torch`
+- Place it in: `segment-anything-2/checkpoints/`
+
+**Option 3: Manual Installation**
+If you don't have `huggingface-cli`, install it first:
+```bash
+pip install huggingface-hub
+```
+Then run the download command from Option 1.
+
 ## Citation
 
 If you find this work useful, please cite our paper:

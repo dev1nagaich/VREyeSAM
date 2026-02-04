@@ -19,6 +19,7 @@ matplotlib>=3.5.0
 
 # Utility
 tqdm>=4.62.0
+hydra-core>=1.1.0
 
 # Note: SAM2 must be installed separately after other requirements:
 # git clone https://github.com/facebookresearch/segment-anything-2

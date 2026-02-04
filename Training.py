@@ -7,15 +7,17 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
+
+# Add segment-anything-2 to path
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), "segment-anything-2"))
+
 from sam2.build_sam import build_sam2
 from sam2.sam2_image_predictor import SAM2ImagePredictor
 
-sys.path.append("/VREyeSAM/segment-anything-2")
-
 # Paths
-checkpoint_path = "VREyeSAM/segment-anything-2/fine_tuned_sam2_with_uncertainity_best.torch"  # your saved model
-FINE_TUNED_MODEL_NAME = "fine_tuned_sam2_with_uncertainity"
-data_dir = "VREyeSAM/VREyeSAM_data"
+checkpoint_path = "segment-anything-2/checkpoints/VREyeSAM_uncertainity_best.torch"  # your saved model
+FINE_TUNED_MODEL_NAME = "VREyeSAM_uncertainity"
+data_dir = "VRBiomSegM/train"
 images_dir = os.path.join(data_dir, "images")
 masks_dir = os.path.join(data_dir, "masks")
 
@@ -50,8 +52,10 @@ def read_batch(data):
 # Resume from checkpoint if available, otherwise start fresh training
 # This allows continuing training from a previously saved model state
 
-model_cfg = "sam2_hiera_s.yaml"
-sam2_checkpoint = "VREyeSAM/segment-anything-2/sam2/sam2_hiera_small.pt"
+# Use absolute path for config to avoid Hydra search path issues
+config_dir = os.path.dirname(__file__)
+model_cfg = os.path.join(config_dir, "segment-anything-2/sam2/configs/sam2.1/sam2.1_hiera_b+.yaml")
+sam2_checkpoint = "segment-anything-2/checkpoints/sam2.1_hiera_base_plus.pt"
 sam2_model = build_sam2(model_cfg, sam2_checkpoint, device="cuda")
 predictor = SAM2ImagePredictor(sam2_model)
 
