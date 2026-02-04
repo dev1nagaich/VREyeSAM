@@ -65,7 +65,7 @@ cd VREyeSAM
 ```bash
 python3 -m venv vreyesam_env
 source vreyesam_env/bin/activate  # Linux/Mac
-# or vreyesam_env\Scripts\activate  # Windows
+# or vreyesam_env\Scripts\activate  # Windows git bash
 ```
 3. Install dependencies:
 ```bash
@@ -73,8 +73,9 @@ pip install -r requirements.txt
 git clone https://github.com/facebookresearch/segment-anything-2
 cd segment-anything-2
 pip install -e .
+cd checkpoints
+bash download_ckpts.sh
 cd ..
-
 ```
 
 ## Citation
