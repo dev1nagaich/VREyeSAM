@@ -1,0 +1,27 @@
+# Python 3.11+ required
+# SAM2 Fine-tuning Requirements
+
+# Core ML and Deep Learning
+torch>=2.0.0
+torchvision>=0.15.0
+numpy>=1.21.0
+
+# Computer Vision
+opencv-python>=4.5.0
+Pillow>=8.0.0
+
+# Data Processing and ML
+pandas>=1.3.0
+scikit-learn>=1.0.0
+
+# Visualization
+matplotlib>=3.5.0
+
+# Utility
+tqdm>=4.62.0
+hydra-core>=1.1.0
+
+# Note: SAM2 must be installed separately after other requirements:
+# git clone https://github.com/facebookresearch/segment-anything-2
+# cd segment-anything-2
+# pip install -e .
