@@ -60,12 +60,14 @@ Figure: Visual comparison of iris segmentation results across multiple models. T
 git clone https://github.com/GeetanjaliGTZ/VREyeSAM
 cd VREyeSAM
 ```
+
 2. Create virtual environment:
 ```bash
 python3 -m venv vreyesam_env
 source vreyesam_env/bin/activate  # Linux/Mac
-# or source vreyesam_env/Scripts/activate  # Windows git bash
+# or vreyesam_env\Scripts\activate  # Windows
 ```
+
 3. Install dependencies:
 ```bash
 pip install -r requirements.txt
@@ -73,16 +75,45 @@ git clone https://github.com/facebookresearch/segment-anything-2
 cd segment-anything-2
 pip install -e .
 cd checkpoints
-bash download_ckpts.sh
 ```
 
-4. Download VREyeSAM fine-tuned weights:
+4. Download SAM2 checkpoints:
+
+**IMPORTANT:** The default `download_ckpts.sh` script downloads SAM2.1 checkpoints. Since VREyeSAM is trained on SAM2 (older version), you need to uncomment the SAM2 download lines before running the script.
+```bash
+# Open the download script
+nano download_ckpts.sh  # or use any text editor (vim, gedit, notepad, etc.)
+
+# Uncomment the SAM2 (older version) download lines
+# The SAM2.1 lines are active by default, but we need SAM2
+# Look for commented lines like:
+#   wget https://dl.fbaipublicfiles.com/segment_anything_2/072824/sam2_hiera_small.pt
+# Remove the '#' to uncomment them
+
+# Then run the script
+bash download_ckpts.sh
+cd ..
+```
+
+Alternatively, download SAM2 checkpoint directly:
+```bash
+wget https://dl.fbaipublicfiles.com/segment_anything_2/072824/sam2_hiera_small.pt
+# If downloaded, move it to the checkpoints folder
+mv sam2_hiera_small.pt checkpoints/
+cd ..
+```
+
+Or if you download it manually from a browser, place the `sam2_hiera_small.pt` file in the `segment-anything-2/checkpoints/` directory.
+
+5. Download VREyeSAM fine-tuned weights:
 
 **Option 1: Using Hugging Face CLI (Recommended)**
 ```bash
+# Make sure you're in the VREyeSAM root directory
+cd ..  # if you're still in segment-anything-2 directory
+
 # Download the fine-tuned model weights from Hugging Face
-huggingface-cli download devnagaich/VREyeSAM VREyeSAM_uncertainity_best.torch --local-dir .
-cd ../..
+huggingface-cli download devnagaich/VREyeSAM VREyeSAM_uncertainity_best.torch --local-dir segment-anything-2/checkpoints/
 ```
 
 **Option 2: Direct Download**
@@ -96,6 +127,57 @@ If you don't have `huggingface-cli`, install it first:
 pip install huggingface-hub
 ```
 Then run the download command from Option 1.
+
+## Usage
+
+### Training
+To continue training from a checkpoint or start fresh:
+```bash
+python Training.py
+```
+
+### Inference
+To generate probabilistic and binary masks:
+```bash
+python Inference.py
+```
+
+### Testing
+To generate uncertainty maps:
+```bash
+python Test.py
+```
+
+## Project Structure
+```
+VREyeSAM/
+├── Training.py              # Training script with uncertainty-weighted loss
+├── Inference.py             # Inference script for mask generation
+├── Test.py                  # Testing script for uncertainty visualization
+├── requirements.txt         # Python dependencies
+├── .gitignore              # Git ignore rules
+├── segment-anything-2/     # SAM2 repository (cloned during setup)
+│   └── checkpoints/        # Model checkpoints
+│       ├── sam2_hiera_small.pt
+│       └── VREyeSAM_uncertainity_best.torch
+├── VRBiomSegM/            # Dataset directory (not included)
+│   ├── train/
+│   │   ├── images/
+│   │   ├── masks/
+│   │   └── pretrained_model/
+│   └── test/
+│       └── images/
+└── VREyeSAM_results/      # Output directory (generated during inference)
+    ├── PROBABILISTIC_MASK_PREDICTION/
+    ├── BINARY_MASK_PREDICTION/
+    └── test_uncertainty_maps/
+```
+
+## Notes
+- The dataset `VRBiomSegM` is not included in this repository and must be obtained separately
+- All model checkpoints (`.pt`, `.torch`, `.pth`) are excluded from version control
+- Generated outputs (masks, plots) are also excluded from the repository
+- Training requires CUDA-capable GPU
 
 ## Citation
 
