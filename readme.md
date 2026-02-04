@@ -63,7 +63,7 @@ cd VREyeSAM
 ```
 2. Create virtual environment:
 ```bash
-python -m venv vreyesam_env
+python3 -m venv vreyesam_env
 source vreyesam_env/bin/activate  # Linux/Mac
 # or vreyesam_env\Scripts\activate  # Windows
 ```
