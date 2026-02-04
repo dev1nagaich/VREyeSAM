@@ -20,8 +20,8 @@ uncertainty_output_folder = os.path.join(output_folder, "test_uncertainty_maps")
 os.makedirs(uncertainty_output_folder, exist_ok=True)
 
 # Load model
-sam2_checkpoint = "segment-anything-2/checkpoints/sam2.1_hiera_base_plus.pt"
-model_cfg = "segment-anything-2/sam2/configs/sam2.1/sam2.1_hiera_s.yaml"
+sam2_checkpoint = "segment-anything-2/checkpoints/sam2_hiera_small.pt"
+model_cfg = "configs/sam2/sam2_hiera_s.yaml"
 FINE_TUNED_MODEL_WEIGHTS = "segment-anything-2/checkpoints/VREyeSAM_uncertainity_best.torch"
 
 sam2_model = build_sam2(model_cfg, sam2_checkpoint, device="cuda")
