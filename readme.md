@@ -6,7 +6,7 @@ Geetanjali Sharma<sup>1</sup>, Dev Nagaich<sup>1</sup>, Gaurav Jaswal<sup>2</sup
 
 <p align="center">
   <a href="https://www.researchgate.net/publication/400248367_VREyeSAM_Virtual_Reality_Non-Frontal_Iris_Segmentation_using_Foundational_Model_with_uncertainty_weighted_loss"><img src="https://img.shields.io/badge/Paper-View-blue.svg" alt="Paper"></a>
-  <a href="#"><img src="https://img.shields.io/badge/Demo-Coming%20Soon-orange.svg" alt="Demo"></a>
+  <a href="https://huggingface.co/spaces/devnagaich/VREyeSAM"><img src="https://img.shields.io/badge/Demo-Link-orange.svg" alt="Demo"></a>
   <a href="#"><img src="https://img.shields.io/badge/VRBiomSegM GT-Contact%20Details%20below-green.svg" alt="VRBiom-SegM GT"></a>
 </p>
 
