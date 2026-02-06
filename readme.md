@@ -83,6 +83,7 @@ nano download_ckpts.sh  # or use any text editor (vim, gedit, notepad, etc.)
 # The SAM2.1 lines are active by default, but we need SAM2
 # Look for commented lines like:
 #   wget https://dl.fbaipublicfiles.com/segment_anything_2/072824/sam2_hiera_small.pt
+#   sam2_hiera_s_url="${SAM2_BASE_URL}/sam2_hiera_small.pt"
 # Remove the '#' to uncomment them
 
 # Then run the script
@@ -108,20 +109,18 @@ Or if you download it manually from a browser, place the `sam2_hiera_small.pt` f
 cd ..  # if you're still in segment-anything-2 directory
 
 # Download the fine-tuned model weights from Hugging Face
-huggingface-cli download devnagaich/VREyeSAM VREyeSAM_uncertainity_best.torch --local-dir segment-anything-2/checkpoints/
+hf download devnagaich/VREyeSAM VREyeSAM_uncertainity_best.torch --local-dir segment-anything-2/checkpoints/
 ```
-
-**Option 2: Direct Download**
-- Download directly from Hugging Face: [https://huggingface.co/devnagaich/VREyeSAM](https://huggingface.co/devnagaich/VREyeSAM)
-- Download the file: `VREyeSAM_uncertainity_best.torch`
-- Place it in: `segment-anything-2/checkpoints/`
-
-**Option 3: Manual Installation**
 If you don't have `huggingface-cli`, install it first:
 ```bash
 pip install huggingface-hub
 ```
 Then run the download command from Option 1.
+
+**Option 2: Direct Download**
+- Download directly from Hugging Face: [https://huggingface.co/devnagaich/VREyeSAM](https://huggingface.co/devnagaich/VREyeSAM)
+- Download the file: `VREyeSAM_uncertainity_best.torch`
+- Place it in: `segment-anything-2/checkpoints/`
 
 ## Usage
 
@@ -146,11 +145,11 @@ python Test.py
 ## Project Structure
 ```
 VREyeSAM/
-├── Training.py              # Training script with uncertainty-weighted loss
-├── Inference.py             # Inference script for mask generation
-├── Test.py                  # Testing script for uncertainty visualization
-├── requirements.txt         # Python dependencies
-├── .gitignore              # Git ignore rules
+├── Training.py             
+├── Inference.py      
+├── Test.py                
+├── requirements.txt       
+├── .gitignore            
 ├── segment-anything-2/     # SAM2 repository (cloned during setup)
 │   └── checkpoints/        # Model checkpoints
 │       ├── sam2_hiera_small.pt
